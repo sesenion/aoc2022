@@ -1,0 +1,9 @@
+<div id="cave" hx-get="/update-cave" hx-trigger="load delay:0s" hx-swap="outerHTML">
+  <p>Number of grains: {{ number_of_grains }} / Update-Counter: {{ update_counter }}</p>
+  <p class="monospace">
+    {% for line in cave %}
+    {% for char in line %}{{ char }}{% endfor %}
+    <br />
+    {% endfor %}
+  </p>
+</div>
