@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Self
 
 from flask import Flask
 import jinja2
@@ -24,7 +25,7 @@ class Position:
     y: int = 0
 
     @classmethod
-    def from_string(cls, input_string: str) -> None:
+    def from_string(cls, input_string: str) -> Self:
         x, y = (int(val) for val in input_string.split(","))
         instance = cls(x=x, y=y)
         return instance
